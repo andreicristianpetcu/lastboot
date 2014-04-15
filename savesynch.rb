@@ -54,6 +54,7 @@ links_destination = save_to
 links_destination.end_with?("/")?links_destination = links_destination[0..-2]:nil
 puts "Link non system resources"
 for soft_link in nondotfile_links do
+  soft_link.start_with?("/home")?soft_link = soft_link[5..-1]:nil
   source = "/mnt/origin_home" + soft_link
   destination = links_destination + soft_link
   puts source + " -> " + destination
