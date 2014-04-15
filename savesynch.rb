@@ -47,13 +47,16 @@ rsync_cmd="rsync -aAXv --delete #{exclude_file_list} #{save_from} #{save_to}"
 puts "#{rsync_cmd}"
 
 `cp /etc/fstab /etc/fstab.original`
-# `#{rsync_cmd}`
+`#{rsync_cmd}`
 `cp #{save_to}etc/fstab.lastboot #{save_to}/etc/fstab`
 
+links_destination = save_to
+links_destination.end_with?("/")?links_destination = links_destination[0..-2]:nil
 puts "links"
 for soft_link in nondotfile_links do
   source = "/mnt/origin_home" + soft_link
-  destination = save_to + soft_link
+  destination = links_destination + soft_link
   puts source + " -> " + destination
-  # `ln -s "$source" "$destination"`
+  `echo "$source" "$destination"`
+  # `ln -s "#{source}" "#{destination}"`
 end
