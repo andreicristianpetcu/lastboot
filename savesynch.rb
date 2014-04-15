@@ -7,7 +7,7 @@ puts "Saving from #{save_from} to #{save_to}"
 exclude_file_list=''
 current_path="#{save_from}home/"
 puts "Current path is #{current_path}"
-user_include_list=["dotfiles", "Dev"]
+user_include_list=["dotfiles"]
 user_exclude_list=[".config/teamviewer9/"]
 
 nondotfile_links = []
@@ -52,11 +52,12 @@ puts "#{rsync_cmd}"
 
 links_destination = save_to
 links_destination.end_with?("/")?links_destination = links_destination[0..-2]:nil
-puts "links"
+puts "Link non system resources"
 for soft_link in nondotfile_links do
   source = "/mnt/origin_home" + soft_link
   destination = links_destination + soft_link
   puts source + " -> " + destination
   `echo "$source" "$destination"`
-  # `ln -s "#{source}" "#{destination}"`
+  `rm -rf "#{destination}"`
+  `ln -s "#{source}" "#{destination}"`
 end
