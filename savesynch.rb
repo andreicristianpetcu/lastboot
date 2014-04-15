@@ -7,7 +7,7 @@ puts "Saving from #{save_from} to #{save_to}"
 exclude_file_list=''
 current_path="#{save_from}home/"
 puts "Current path is #{current_path}"
-user_include_list=["dotfiles"]
+user_include_list=["Anki", "Calibre Library", "Desktop", "Documents", "dotfiles", "Games", "Pictures"]
 user_exclude_list=[".config/teamviewer9/"]
 
 nondotfile_links = []
