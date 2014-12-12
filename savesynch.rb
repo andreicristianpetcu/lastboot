@@ -39,7 +39,7 @@ Dir.foreach("#{current_path}") do |user|
   end
 end
 
-extra_ignore_list=["dev", "proc", "sys", "tmp", "run", "mnt", "media", "lost+found"]
+extra_ignore_list=["dev", "proc", "sys", "tmp", "run", "mnt", "media", "lost+found", "var/lib/mongodb"]
 extra_ignore_list.each do |exclude_dir|
   exclude_file_list="#{exclude_file_list}" + " --exclude '" + "#{exclude_dir}" + "'"
 end
@@ -61,5 +61,5 @@ for soft_link in nondotfile_links do
   puts source + " -> " + destination
   `echo "$source" "$destination"`
   `rm -rf "#{destination}"`
-  `ln -s "#{source}" "#{destination}"`
+  # `ln -s "#{source}" "#{destination}"`
 end
