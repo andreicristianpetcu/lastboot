@@ -7,7 +7,7 @@ UUID=ebe89719-49a3-4757-ba64-03199ab7ddc9	/         	ext4      	rw,relatime,data
 UUID=ccab50df-5ee4-437f-8502-340eb52ef03a	/mnt/lastboot   ext4      	rw,relatime,data=ordered	0 1
 
 # /dev/sdb5 LABEL=ArchLinuxHome
-UUID=4e9b9208-ab7c-4f06-9622-01ff672aed9f	/home     	ext4      	rw,relatime,data=ordered	0 2
+# UUID=4e9b9208-ab7c-4f06-9622-01ff672aed9f	/home     	ext4      	rw,relatime,data=ordered	0 2
 
 # /dev/sda1 LABEL=HDD500
 UUID=5027c518-87db-4f89-823e-53d30b5ac735	/mnt/hdd500	ext4      	rw,relatime,data=ordered	0 2
