@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 
+puts `date`
 save_from="/"
 save_to="/mnt/lastboot/"
 # save_from="/tmp/delete_me/"
@@ -18,3 +19,4 @@ puts "#{rsync_cmd}"
 `cp /etc/fstab /etc/fstab.original`
 `#{rsync_cmd}`
 `cp #{save_to}etc/fstab.lastboot #{save_to}/etc/fstab`
+puts `date`
