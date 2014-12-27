@@ -3,14 +3,14 @@
 #
 # <file system>	<dir>	<type>	<options>	<dump>	<pass>
 # /dev/sdb1
-UUID=ebe89719-49a3-4757-ba64-03199ab7ddc9	/mnt/origin         	ext4      	rw,relatime,data=ordered	0 1
-UUID=ccab50df-5ee4-437f-8502-340eb52ef03a	/   ext4      	rw,relatime,data=ordered	0 1
+UUID=ebe89719-49a3-4757-ba64-03199ab7ddc9	/mnt/origin         	ext4      	rw,relatime,data=ordered	0 0
+UUID=8a4cfeb9-31ae-4c8f-9e66-d9253e42c9e6	/                     ext4      	rw,relatime,data=ordered	0 1
 
 # /dev/sdb5 LABEL=ArchLinuxHome
 # UUID=4e9b9208-ab7c-4f06-9622-01ff672aed9f	/mnt/origin_home     	ext4      	rw,relatime,data=ordered	0 2
 
 # /dev/sda1 LABEL=HDD500
-UUID=5027c518-87db-4f89-823e-53d30b5ac735	/mnt/hdd500	ext4      	rw,relatime,data=ordered	0 2
+UUID=5027c518-87db-4f89-823e-53d30b5ac735	/mnt/hdd500	          ext4      	rw,relatime,data=ordered	0 0
 
 # Swap to sda
 UUID=77ecfb81-c337-481e-bb30-062aa1e1315d	none 		swap 		defaults 			0 0
